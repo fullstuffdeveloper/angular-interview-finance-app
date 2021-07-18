@@ -1,0 +1,9 @@
+<div class="form-base-container">
+    <form [formGroup]="baseForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your name</mat-label>
+            <input matInput placeholder="name" formControlName="name" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+    </form>
+</div>
